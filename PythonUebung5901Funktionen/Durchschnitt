@@ -1,0 +1,41 @@
+#---------------------------------------------------------------
+# Dateiname: Durchschnitt.py
+#---------------------------------------------------------------
+# Beschreibung:
+# Das Programm berechnet den Durchschnitt einer Zahlenfolge.
+# Autor: Lena
+# Letzte Änderung: 11.06.2025
+#---------------------------------------------------------------
+
+
+# schöne und einfache Lösung
+# def durchschnitt(zahlen: list) -> float:
+#     """
+#     Berechnet den Durchschnitt einer Liste von Zahlen.
+
+#     :param zahlen: Liste von Zahlen
+#     :return: Durchschnitt der Zahlen in der Liste
+#     """
+#     if not zahlen:
+#         return 0.0  # Verhindert Division durch Null, wenn die Liste leer ist
+#     return sum(zahlen) / len(zahlen)    
+
+# Lösung nach Vorgabe
+def durchschnitt(zahlen: list) -> float:
+    """
+    Berechnet den Durchschnitt einer Liste von Zahlen.
+
+    :param zahlen: Liste von Zahlen
+    :return: Durchschnitt der Zahlen in der Liste
+    """
+    if len(zahlen) == 0:
+        return None  # Verhindert Division durch Null, wenn die Liste leer ist
+    
+    summe = 0.0
+    for zahl in zahlen:
+        summe += zahl
+    
+    return summe / len(zahlen)
+
+zahlen_liste = [10, 20, 30, 40, 50]
+print("Der Durchschnitt der Zahlen in der Liste ist:", durchschnitt(zahlen_liste))
